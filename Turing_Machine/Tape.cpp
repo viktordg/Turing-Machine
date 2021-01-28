@@ -4,8 +4,8 @@
 Tape::Tape(const std::string& input)
 {
 	std::copy(input.begin(), input.end(), std::back_inserter(this->tape));
-	this->tape.push_back(' ');
-	this->tape.push_back(' ');
+	// F is used as blank space
+	this->tape.push_back('F');
 	this->current = 0;
 }
 Tape::Tape(const Tape& other)
@@ -30,6 +30,13 @@ void Tape::write(char symbol)
 {
 	this->tape[this->current] = symbol;
 }
+void Tape::moveToStart()
+{
+	while (this->current != 0)
+	{
+		this->moveLeft();
+	}
+}
 
 int Tape::get_size() const
 {
@@ -42,6 +49,16 @@ std::vector<char> Tape::get_tapeVector() const
 char Tape::get_current() const
 {
 	return this->current;
+}
+std::string Tape::get_tapeString() const 
+{
+	std::string tapeString;
+	for (size_t i = 0; i < this->tape.size(); i++)
+	{
+		tapeString += this->tape[i];
+	}
+
+	return tapeString;
 }
 
 std::ostream& operator<<(std::ostream& out, Tape &outTape) 

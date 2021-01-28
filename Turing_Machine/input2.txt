@@ -1,0 +1,6 @@
+1
+xyyyx
+x{q0}->t{q1}R
+y{q1}->z{q1}R
+x{q1}->t{q2}R
+F{q2}->F{accept}R

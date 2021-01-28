@@ -1,0 +1,6 @@
+1
+001001
+x{q0}->x{q0}R
+y{q0}->z{q1}R
+y{q1}->y{accept}R
+x{q1}->x{accept}R

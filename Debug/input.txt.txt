@@ -1,0 +1,18 @@
+1
+aaabbbccc
+a{q0} -> x{q1}R
+y{q0} -> y{q4}R
+a{q1} -> a{q1}R
+b{q1} -> y{q2}R
+y{q1} -> y{q1}R
+b{q2} -> b{q2}R
+c{q2} -> z{q3}L
+z{q2} -> z{q2}R
+a{q3} -> a{q3}L
+b{q3} -> b{q3}L
+x{q3} -> x{q0}R
+y{q3} -> y{q3}L
+z{q3} -> z{q3}L
+y{q4} -> y{q4}R
+z{q4} -> z{accept}S
+ {q4} ->  {accept}R
